@@ -20,6 +20,7 @@ export const getTweets = async (ids) => {
       `https://api.twitter.com/2/tweets?${queryParams}`,
       {
         // mode: 'cors',
+        method: 'POST',
         headers: {
           Authorization: `Bearer ${process.env.TWITTER_API_KEY}`
         }
