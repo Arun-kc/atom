@@ -23,7 +23,7 @@ export const getTweets = async (ids) => {
         method: 'GET',
         headers: {
           "User-Agent": "v2TweetLookupJS",
-          Authorization: `Basic ${process.env.TWITTER_API_KEY}`
+          Authorization: `Bearer ${process.env.TWITTER_API_KEY}`
         }
       }
     );
