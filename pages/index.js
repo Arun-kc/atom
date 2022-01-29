@@ -1,17 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import React, { useState} from 'react'
 import Page from '../components/page'
+import Header from '../components/header'
 
 export default function Home() {
-  //const [selectedLink, setSelectedLink] = useState();
+  const [selectedLink, setSelectedLink] = useState();
   return (
     <div>
       <Head>
         <title>Atom</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Header setSelectedLink={setSelectedLink}/> */}
+      <Header setSelectedLink={setSelectedLink}/>
       <Page/>
     </div>
   )

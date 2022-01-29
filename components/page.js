@@ -1,6 +1,10 @@
 import React from 'react'
+import { getTweets } from '../libs/twitter';
 
 function Page() {
+
+    const tweet = getTweets(['1414491290486534147']);
+    console.log(tweet);
     
     return (
         <div className="bg-gray-50 min-h-screen flex justify-center px-10">
