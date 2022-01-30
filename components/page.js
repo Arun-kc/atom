@@ -1,21 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
+import Tweet from '../components/tweet'
 //import { getTweets } from '../libs/twitter';
 
-function Page({selectedLink}) {
+function Page({tweetData}) {
 
     //const tweet = getTweets(['1414491290486534147']);
-    const id = selectedLink.split('/')[5]
-    console.log(id)
-    const {tweet, status} = axios.get(`/api/tweet/${id}`);
-    console.log(tweet);
-    console.log(status);
-    // const bringTweet = async (e) => {
+    // const [tweetData, setTweetData] = useState(null)
+    console.log(tweetData);
+    // const id = selectedLink.split('/')[5]
+    // console.log(id)
+    // const {tweet, status} = axios.get(`/api/tweet/${id}`);
+    // console.log(tweet);
+    // console.log(status);
+    // const bringTweet = async () => {
     //     try {
-    //         const id = '1414491290486534147'
     //         const { data, status } = await axios.get(`/api/tweet/${id}`)
     //         console.log(data);
     //         console.log(status);
+    //         setTweetData(data.data);
+    //         console.log(tweetData);
     //     } catch (e) {
     //     }
     // }
@@ -34,7 +38,7 @@ function Page({selectedLink}) {
                     </div>
                 </div>
             </div>
-            {/* <Tweet key={tweet.id} {...tweet} /> */}
+            <Tweet tweet={tweetData} />
         </div>
         </div>
     )
