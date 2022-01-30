@@ -6,7 +6,7 @@ import Page from '../components/page'
 import Header from '../components/header'
 
 export default function Home() {
-  const [selectedLink, setSelectedLink] = useState();
+  const [selectedLink, setSelectedLink] = useState('1487622403920306179');
   return (
     <div>
       <Head>
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header setSelectedLink={setSelectedLink}/>
-      <Page/>
+      <Page selectedLink={selectedLink}/>
     </div>
   )
 }

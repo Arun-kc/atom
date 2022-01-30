@@ -2,13 +2,14 @@ import React from 'react'
 import axios from 'axios'
 //import { getTweets } from '../libs/twitter';
 
-function Page() {
+function Page({selectedLink}) {
 
     //const tweet = getTweets(['1414491290486534147']);
-    const id = '1414491290486534147'
+    const id = selectedLink.split('/')[5]
+    console.log(id)
     const {tweet, status} = axios.get(`/api/tweet/${id}`);
-    // console.log(tweet);
-    // console.log(status);
+    console.log(tweet);
+    console.log(status);
     // const bringTweet = async (e) => {
     //     try {
     //         const id = '1414491290486534147'
