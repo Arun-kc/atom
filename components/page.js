@@ -1,10 +1,24 @@
 import React from 'react'
-import { getTweets } from '../libs/twitter';
+import axios from 'axios'
+//import { getTweets } from '../libs/twitter';
 
 function Page() {
 
-    const tweet = getTweets(['1414491290486534147']);
-    console.log(tweet);
+    //const tweet = getTweets(['1414491290486534147']);
+    const id = '1414491290486534147'
+    const {tweet, status} = axios.get(`/api/tweet/${id}`);
+    // console.log(tweet);
+    // console.log(status);
+    // const bringTweet = async (e) => {
+    //     try {
+    //         const id = '1414491290486534147'
+    //         const { data, status } = await axios.get(`/api/tweet/${id}`)
+    //         console.log(data);
+    //         console.log(status);
+    //     } catch (e) {
+    //     }
+    // }
+    // console.log(bringTweet);
     
     return (
         <div className="bg-gray-50 min-h-screen flex justify-center px-10">

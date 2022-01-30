@@ -1,3 +1,9 @@
+import axios from 'axios'
+
+const headers = {
+    'Authorization': `Bearer ${process.env.NEXT_APP_BEARER_TOKEN}`
+}
+
 export const getTweets = async (ids) => {
     if (ids.length === 0) {
       return [];
